@@ -1,0 +1,8 @@
+rootProject.name = 'spring-boot-grpc-example'
+
+include "grpc-lib"
+include "local:grpc-client"
+include "local:grpc-server"
+include "cloud:eureka-server"
+include "cloud:grpc-client"
+include "cloud:grpc-server"
