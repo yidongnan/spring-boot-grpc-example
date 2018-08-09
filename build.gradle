@@ -1,7 +1,6 @@
 buildscript {
     repositories {
         mavenLocal()
-        maven { url 'http://10.198.1.169:8081/nexus/content/groups/public' }
         maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
         maven{ url 'http://maven.aliyun.com/nexus/content/repositories/jcenter'}
         mavenCentral()
@@ -11,11 +10,12 @@ buildscript {
     }
     ext {
         springBootVersion = '2.0.2.RELEASE'
-        springBootGrpcVersion = '2.0.0.RELEASE'
+        springBootGrpcVersion = '2.0.1.RELEASE'
         springCloudVersion = 'Finchley.RELEASE'
         grpcVersion = '1.13.1'
         protobufVersion = '3.5.1'
         protobufGradlePluginVersion = '0.8.4'
+        braveInstrumentationGrpc='5.1.2'
     }
     dependencies {
         classpath "io.spring.gradle:dependency-management-plugin:0.6.1.RELEASE"
@@ -40,7 +40,6 @@ subprojects {
 
     repositories {
         mavenLocal()
-        maven { url 'http://10.198.1.169:8081/nexus/content/groups/public' }
         maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
         maven{ url 'http://maven.aliyun.com/nexus/content/repositories/jcenter'}
         mavenCentral()
@@ -51,7 +50,6 @@ subprojects {
     buildscript {
         repositories {
             mavenLocal()
-            maven { url 'http://10.198.1.169:8081/nexus/content/groups/public' }
             maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
             maven{ url 'http://maven.aliyun.com/nexus/content/repositories/jcenter'}
             mavenCentral()
