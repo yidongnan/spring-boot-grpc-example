@@ -1,25 +1,30 @@
 buildscript {
     repositories {
         mavenLocal()
+        maven { url 'http://10.198.1.169:8081/nexus/content/groups/public' }
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+        maven{ url 'http://maven.aliyun.com/nexus/content/repositories/jcenter'}
         mavenCentral()
         jcenter()
         maven { url 'http://repo.spring.io/plugins-release' }
         maven { url "https://plugins.gradle.org/m2/" }
     }
     ext {
-        springBootVersion = '1.4.2.RELEASE'
-        springBootGrpcVersion = '1.0.0.RELEASE'
-        springCloudVersion = 'Camden.SR3'
-        grpcVersion = '1.0.3'
-        protobufVersion = '3.1.0'
+        springBootVersion = '2.0.2.RELEASE'
+        springBootGrpcVersion = '2.0.0.RELEASE'
+        springCloudVersion = 'Finchley.RELEASE'
+        grpcVersion = '1.13.1'
+        protobufVersion = '3.5.1'
+        protobufGradlePluginVersion = '0.8.4'
     }
     dependencies {
         classpath "io.spring.gradle:dependency-management-plugin:0.6.1.RELEASE"
+        classpath "org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}"
     }
 }
 
 task wrapper(type: Wrapper) {
-    gradleVersion = '3.3'
+    gradleVersion = '4.7'
 }
 
 subprojects {
@@ -35,6 +40,9 @@ subprojects {
 
     repositories {
         mavenLocal()
+        maven { url 'http://10.198.1.169:8081/nexus/content/groups/public' }
+        maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+        maven{ url 'http://maven.aliyun.com/nexus/content/repositories/jcenter'}
         mavenCentral()
         jcenter()
         maven { url 'http://repo.spring.io/plugins-release' }
@@ -43,7 +51,13 @@ subprojects {
     buildscript {
         repositories {
             mavenLocal()
+            maven { url 'http://10.198.1.169:8081/nexus/content/groups/public' }
+            maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
+            maven{ url 'http://maven.aliyun.com/nexus/content/repositories/jcenter'}
             mavenCentral()
+            jcenter()
+            maven { url 'http://repo.spring.io/plugins-release' }
+            maven { url "https://plugins.gradle.org/m2/" }
         }
     }
 }
