@@ -1,0 +1,18 @@
+spring:
+  application:
+    name: cloud-grpc-server
+  sleuth:
+    sampler:
+      probability: 1
+
+  cloud:
+    consul:
+      discovery:
+        prefer-ip-address: true
+      host: 127.0.0.1
+      port: 8500
+server:
+  port: 0
+grpc:
+  server:
+    port: 0

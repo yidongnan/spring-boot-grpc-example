@@ -1,6 +1,7 @@
 buildscript {
     repositories {
         mavenLocal()
+        maven { url 'http://10.198.1.169:8081/nexus/content/groups/public' }
         maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
         maven{ url 'http://maven.aliyun.com/nexus/content/repositories/jcenter'}
         mavenCentral()
@@ -40,6 +41,7 @@ subprojects {
 
     repositories {
         mavenLocal()
+        maven { url 'http://10.198.1.169:8081/nexus/content/groups/public' }
         maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
         maven{ url 'http://maven.aliyun.com/nexus/content/repositories/jcenter'}
         mavenCentral()
@@ -50,6 +52,7 @@ subprojects {
     buildscript {
         repositories {
             mavenLocal()
+            maven { url 'http://10.198.1.169:8081/nexus/content/groups/public' }
             maven { url 'http://maven.aliyun.com/nexus/content/groups/public/' }
             maven{ url 'http://maven.aliyun.com/nexus/content/repositories/jcenter'}
             mavenCentral()
