@@ -18,10 +18,9 @@ import io.grpc.examples.helloworld.HelloRequest;
 public class GrpcClientService {
 
     @GrpcClient("cloud-grpc-server")
-    private Channel serverChannel;
+    private GreeterGrpc.GreeterBlockingStub stub;
 
     public String sendMessage(String name) {
-        GreeterGrpc.GreeterBlockingStub stub = GreeterGrpc.newBlockingStub(serverChannel);
         HelloReply response = stub.sayHello(HelloRequest.newBuilder().setName(name).build());
         return response.getMessage();
     }

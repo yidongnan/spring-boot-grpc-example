@@ -12,3 +12,9 @@ spring:
         prefer-ip-address: true
       host: 127.0.0.1
       port: 8500
+grpc:
+  client:
+    cloud-grpc-server:
+      enableKeepAlive: true
+      keepAliveWithoutCalls: true
+      negotiationType: plaintext

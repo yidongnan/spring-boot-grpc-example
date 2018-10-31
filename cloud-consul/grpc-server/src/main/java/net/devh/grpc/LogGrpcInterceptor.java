@@ -7,12 +7,14 @@ import io.grpc.Metadata;
 import io.grpc.ServerCall;
 import io.grpc.ServerCallHandler;
 import io.grpc.ServerInterceptor;
+import net.devh.springboot.autoconfigure.grpc.server.GrpcGlobalServerInterceptor;
 
 /**
  * User: Michael
  * Email: yidongnan@gmail.com
  * Date: 2016/12/6
  */
+@GrpcGlobalServerInterceptor
 public class LogGrpcInterceptor implements ServerInterceptor {
 
     private static final Logger log = LoggerFactory.getLogger(LogGrpcInterceptor.class);

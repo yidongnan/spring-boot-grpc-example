@@ -8,18 +8,22 @@ import io.grpc.Channel;
 import io.grpc.ClientCall;
 import io.grpc.ClientInterceptor;
 import io.grpc.MethodDescriptor;
+import net.devh.springboot.autoconfigure.grpc.client.GrpcGlobalClientInterceptor;
 
 /**
  * User: Michael
  * Email: yidongnan@gmail.com
  * Date: 2016/12/8
  */
+@GrpcGlobalClientInterceptor
 public class LogGrpcInterceptor implements ClientInterceptor {
 
     private static final Logger log = LoggerFactory.getLogger(LogGrpcInterceptor.class);
 
     @Override
-    public <ReqT, RespT> ClientCall<ReqT, RespT> interceptCall(MethodDescriptor<ReqT, RespT> method, CallOptions callOptions, Channel next) {
+    public <ReqT, RespT> ClientCall<ReqT, RespT> interceptCall(MethodDescriptor<ReqT, RespT> method,
+            CallOptions callOptions,
+            Channel next) {
         log.info(method.getFullMethodName());
         return next.newCall(method, callOptions);
     }
