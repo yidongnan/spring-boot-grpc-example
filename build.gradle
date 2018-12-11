@@ -13,7 +13,7 @@ buildscript {
         springBootGrpcVersion = '2.1.0.RELEASE'
         springCloudVersion = 'Finchley.RELEASE'
         grpcVersion = '1.13.1'
-        protobufVersion = '3.5.1'
+        protobufVersion = '3.6.1'
         protobufGradlePluginVersion = '0.8.4'
         braveInstrumentationGrpc='5.1.2'
     }
