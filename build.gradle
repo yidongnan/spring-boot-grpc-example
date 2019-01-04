@@ -18,7 +18,7 @@ buildscript {
         braveInstrumentationGrpc='5.1.2'
     }
     dependencies {
-        classpath "io.spring.gradle:dependency-management-plugin:0.6.1.RELEASE"
+        classpath "io.spring.gradle:dependency-management-plugin:1.0.6.RELEASE"
         classpath "org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}"
     }
 }
