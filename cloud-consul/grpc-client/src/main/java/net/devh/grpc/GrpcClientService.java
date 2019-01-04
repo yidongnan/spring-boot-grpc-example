@@ -1,13 +1,11 @@
 package net.devh.grpc;
 
-import net.devh.springboot.autoconfigure.grpc.client.GrpcClient;
-
 import org.springframework.stereotype.Service;
 
-import io.grpc.Channel;
 import io.grpc.examples.helloworld.GreeterGrpc;
 import io.grpc.examples.helloworld.HelloReply;
 import io.grpc.examples.helloworld.HelloRequest;
+import net.devh.boot.grpc.client.inject.GrpcClient;
 
 /**
  * User: Michael

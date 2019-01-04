@@ -1,12 +1,11 @@
 package net.devh.grpc;
 
 
-import net.devh.springboot.autoconfigure.grpc.server.GrpcService;
-
 import io.grpc.examples.helloworld.GreeterGrpc;
 import io.grpc.examples.helloworld.HelloReply;
 import io.grpc.examples.helloworld.HelloRequest;
 import io.grpc.stub.StreamObserver;
+import net.devh.boot.grpc.server.service.GrpcService;
 
 /**
  * User: Michael
@@ -14,7 +13,7 @@ import io.grpc.stub.StreamObserver;
  * Date: 2016/11/8
  */
 
-@GrpcService(GreeterGrpc.class)
+@GrpcService
 public class GrpcServerService extends GreeterGrpc.GreeterImplBase {
 
     @Override

@@ -8,7 +8,7 @@ import io.grpc.Channel;
 import io.grpc.ClientCall;
 import io.grpc.ClientInterceptor;
 import io.grpc.MethodDescriptor;
-import net.devh.springboot.autoconfigure.grpc.client.GrpcGlobalClientInterceptor;
+import net.devh.boot.grpc.client.interceptor.GrpcGlobalClientInterceptor;
 
 /**
  * User: Michael
