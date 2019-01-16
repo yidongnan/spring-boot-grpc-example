@@ -14,7 +14,7 @@ buildscript {
         springCloudVersion = 'Finchley.SR2'
         grpcVersion = '1.17.1'
         protobufVersion = '3.6.1'
-        protobufGradlePluginVersion = '0.8.7'
+        protobufGradlePluginVersion = '0.8.8'
         braveInstrumentationGrpc='5.6.0'
     }
     dependencies {
