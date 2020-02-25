@@ -15,7 +15,7 @@ buildscript {
         grpcVersion = '1.17.1'
         protobufVersion = '3.6.1'
         protobufGradlePluginVersion = '0.8.7'
-        braveInstrumentationGrpc='5.6.0'
+        braveInstrumentationGrpc='5.10.0'
     }
     dependencies {
         classpath "io.spring.gradle:dependency-management-plugin:1.0.6.RELEASE"
