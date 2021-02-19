@@ -10,7 +10,7 @@ buildscript {
     }
     ext {
         springBootVersion = '2.0.6.RELEASE'
-        springBootGrpcVersion = '2.2.0.RELEASE'
+        springBootGrpcVersion = '2.11.0.RELEASE'
         springCloudVersion = 'Finchley.SR2'
         grpcVersion = '1.17.1'
         protobufVersion = '3.6.1'
