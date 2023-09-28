@@ -1,9 +1,11 @@
-apply plugin: 'com.google.protobuf'
+plugins {
+    id 'com.google.protobuf'
+}
 
 dependencies {
-    compile "io.grpc:grpc-netty:${grpcVersion}"
-    compile "io.grpc:grpc-protobuf:${grpcVersion}"
-    compile "io.grpc:grpc-stub:${grpcVersion}"
+    implementation "io.grpc:grpc-netty-shaded:${grpcVersion}"
+    implementation "io.grpc:grpc-protobuf:${grpcVersion}"
+    implementation "io.grpc:grpc-stub:${grpcVersion}"
 }
 
 protobuf {
@@ -28,15 +30,9 @@ protobuf {
 
 idea {
     module {
-        sourceDirs += file("src/generated/main/java")
-        sourceDirs += file("src/generated/main/grpc")
-        generatedSourceDirs += file("src/generated/main/java")
-        generatedSourceDirs += file("src/generated/main/grpc")
-    }
-}
-
-buildscript {
-    dependencies {
-        classpath "com.google.protobuf:protobuf-gradle-plugin:${protobufGradlePluginVersion}"
+        sourceDirs += file('src/generated/main/java')
+        sourceDirs += file('src/generated/main/grpc')
+        generatedSourceDirs += file('src/generated/main/java')
+        generatedSourceDirs += file('src/generated/main/grpc')
     }
 }

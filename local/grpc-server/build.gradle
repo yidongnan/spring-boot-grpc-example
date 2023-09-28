@@ -1,9 +1,9 @@
 apply plugin: 'org.springframework.boot'
 
 dependencies {
-    compile('org.springframework.boot:spring-boot-starter')
-    compile("net.devh:grpc-server-spring-boot-starter:${springBootGrpcVersion}")
-    compile project(':grpc-lib')
+    implementation('org.springframework.boot:spring-boot-starter')
+    implementation("net.devh:grpc-server-spring-boot-starter:${springBootGrpcVersion}")
+    implementation project(':grpc-lib')
 }
 
 buildscript {
